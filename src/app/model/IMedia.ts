@@ -1,0 +1,41 @@
+import { ICustomProperty } from './ICustomProperty';
+import { IOrganization } from './IOrganization';
+import { IRepresentation } from './IRepresentation';
+import { IActivityTask } from './ITask';
+
+export interface IMedia {
+  _id?: string;
+  media_id?: string;
+  origin_user_id?: string;
+  origin_device_uid?: string;
+  basename?: string;
+  tags?: string[];
+  created_at?: string;
+  recorded_at?: string;
+  representations?: IRepresentation[];
+  cover_url?: string;
+  organization_id?: string;
+  organization_ids?: string[];
+  organizations?: IOrganization[];
+  owner_organization_id?: string;
+  owner_user_id?: string;
+  grid_cover_url?: string;
+  cover_storage_key?: string;
+  skim_storage_key?: string;
+  skim_url?: string;
+  thumbs?: number;
+  metadata?: ICustomProperty[];
+  first_frame_timestamp?: number;
+  mission_ids?: string[];
+  missions?: any[];
+  permissions?: string[];
+  type?: string;
+  duration?: number;
+  title?: string;
+  description?: string;
+  notes?: string;
+  summary?: string;
+  external_ids?: string[];
+  tasks?: IActivityTask[];
+  transcript_language?: string;
+}
