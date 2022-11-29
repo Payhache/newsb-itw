@@ -6,9 +6,13 @@ import { MediaListService } from './services/media-list.service';
 
 @Component({
   selector: 'my-app',
-  template: `<div *ngIf="medialist$ | async as medialist">
-  <app-media *ngFor="let item of medialist.data" [media]="item"></app-media>
-</div>
+  template: `
+    <div *ngIf="medialist$ | async as medialist">
+      <app-media 
+        *ngFor="let item of medialist.data" 
+        [media]="item">
+      </app-media>
+    </div>
 
 `,
   styleUrls: []
@@ -18,5 +22,4 @@ export class AppComponent {
   constructor(private mediaListService: MediaListService) {
     this.medialist$ = this.mediaListService.getMedias();
   }
-
 }
