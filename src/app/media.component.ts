@@ -9,7 +9,11 @@ import { IMedia } from './model/IMedia';
     <p *ngIf="media.type === 'video'"> Durée : {{media.duration || "n/c" | number: '3.0-2'}} min</p>
     <p *ngIf="media.type !== 'video'"> Type de média : {{media.type}}</p>
   `,
-  styles: [`host: {margin-top: 2rem;}`
+  styles: [
+    ` host: {
+        margin-top: 2rem;
+      }
+    `
   ]
 })
 export class MediaComponent {
